@@ -1,6 +1,6 @@
 # gen
 if [ "x$1" = "xgen" ]; then
-  protoc -I howdyworld/howdyworld/ howdyworld/howdyworld/howdyworld.proto --go_out=plugins=grpc:howdyworld/howdyworld/
+  protoc howdyworld.proto --go_out=plugins=grpc:howdy_server/
 fi
 
 # start

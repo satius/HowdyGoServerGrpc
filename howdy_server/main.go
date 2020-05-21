@@ -6,7 +6,11 @@ import (
 	"net"
 	"strconv"
 
-	howdyPb "../howdyworld/com.github.sugiyamas/howdyworld"
+	//howdyPb "../howdyworld/com.github.sugiyamas/howdyworld"
+	//howdyPb "github.com/sugiyamas/HowdyGoServerGrpc/howdyworld/howdyworld/com.github.sugiyamas/howdyworld"
+	//howdyPb "./com.github.sugiyamas/howdyworld"
+	howdyPb "github.com/sugiyamas/HowdyGoServerGrpc/howdy_server/com.github.sugiyamas/howdyworld"
+
 	"google.golang.org/grpc"
 )
 
@@ -33,7 +37,7 @@ func main() {
 	s := grpc.NewServer()
 	howdyPb.RegisterGreeterServer(s, &server{})
 
-	log.Printf("Listening... port: %v", port)
+	log.Print("Listening...")
 
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
