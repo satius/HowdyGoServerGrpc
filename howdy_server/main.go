@@ -6,16 +6,13 @@ import (
 	"net"
 	"strconv"
 
-	//howdyPb "../howdyworld/com.github.sugiyamas/howdyworld"
-	//howdyPb "github.com/sugiyamas/HowdyGoServerGrpc/howdyworld/howdyworld/com.github.sugiyamas/howdyworld"
-	//howdyPb "./com.github.sugiyamas/howdyworld"
 	howdyPb "github.com/sugiyamas/HowdyGoServerGrpc/howdy_server/com.github.sugiyamas/howdyworld"
 
 	"google.golang.org/grpc"
 )
 
 const (
-	port = 50000
+	port = 80
 )
 
 // server is used to implement howdyworld.GreeterServer.

@@ -5,5 +5,6 @@ fi
 
 # start
 if [ "x$1" = "xstart" ]; then
-  go run howdyworld/howdy_server/main.go
+  docker build . -t howdy
+  docker run --rm -p 8000:80 howdy ./main
 fi
